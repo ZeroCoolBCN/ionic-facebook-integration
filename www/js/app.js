@@ -22,6 +22,6 @@ angular.module('ionicFacebookIntergration', [
       StatusBar.styleDefault();
     }
 
-    openFBService.init();
+    openFBService.init('132817680413514');
   });
 })

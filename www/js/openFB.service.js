@@ -5,13 +5,12 @@
     .module('ionicFacebookIntergration.services', [])
     .service("openFBService", openFBService);
 
-    openFBService.$inject = ['$q', '$ionicLoading', '$ionicPopup']
+    openFBService.$inject = ['$q', '$ionicLoading', '$ionicPopup', "$state"]
 
-    function openFBService($q, $ionicLoading, $ionicPopup){
+    function openFBService($q, $ionicLoading, $ionicPopup, $state){
 
-      function init(access_token){
-        // localStorage["fbAccessToken"] = access_token;
-        openFB.init({appId: '132817680413514', sessionStorage: window.localStorage});
+      function init(appId){
+        openFB.init({appId: appId, sessionStorage: window.localStorage});
       }
 
       function login(callback){
@@ -89,6 +88,7 @@
           title: 'Error',
           template: error.message
         });
+        $state.go("login");
       }
 
       return {
