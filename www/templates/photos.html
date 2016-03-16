@@ -1,0 +1,11 @@
+<ion-view view-title="Photos">
+  <ion-content has-subheader="false">
+    <div class="albums-photos">
+      <ul>
+        <li ng-repeat="photo in vm.photos">
+          <img ng-src="{{ photo.source }}" ng-click="vm.previewImage(photo)">
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

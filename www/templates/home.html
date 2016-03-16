@@ -1,0 +1,13 @@
+<ion-view view-title="Facebook Albums">
+  <ion-content has-subheader="false">
+    <div class="list album-list">
+      <a class="item item-thumbnail-left" href="#/albums/{{ album.id }}" ng-repeat="album in vm.albums">
+        <img ng-src="{{ album.picture_url }}">
+        <div class="album-info">
+          <h2>{{ album.name }}</h2>
+          <p>{{ album.count }} photos</p>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
