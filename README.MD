@@ -7,8 +7,8 @@ A simple application using Ionic integrated Facebook. Get albums from Facebook a
 1. Create an Ionic project
 
 2. Add the inappbrowser plugin to your project
-
-`ionic plugin add cordova-plugin-inappbrowser`
+  
+  `ionic plugin add cordova-plugin-inappbrowser`
 
 3. copy `openfb.js` to your project and import it in your `index.html`
 
